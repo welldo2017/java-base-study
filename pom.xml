@@ -14,6 +14,7 @@
         <logback.version>1.2.3</logback.version>
 
         <commonslog.version>1.2</commonslog.version>
+        <!--github 提示, 需要改到2.13.2-->
         <log4j.version>2.11.2</log4j.version>
     </properties>
 

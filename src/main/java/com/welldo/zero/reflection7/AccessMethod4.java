@@ -1,13 +1,12 @@
 package com.welldo.zero.reflection7;
 
 import com.welldo.zero.oop_4.base.Plymorphic5;
-
 import java.lang.reflect.Method;
 
 /**
  * 访问方法
  *
- * 1.
+ *  1.
  * 同样的，可以通过Class实例获取所有Method信息。Class类提供了以下几个方法来获取Method：
  *      Method getMethod(name, Class...)：获取某个public的Method（包括父类）
  *      Method getDeclaredMethod(name, Class...)：获取当前类的某个Method（不包括父类）
@@ -23,7 +22,6 @@ import java.lang.reflect.Method;
  *
  * 2.5 同样, 我们通过Method.setAccessible(true)允许其调用public 和 非public方法
  * 同样, setAccessible(true)可能会失败
- *
  *
  * 3.调用方法
  *
