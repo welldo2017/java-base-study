@@ -11,13 +11,16 @@ import java.util.List;
  * 泛型的好处是使用时不必对类型进行强制转换，它通过编译器对类型进行检查；
  *
  * 1.
- * 泛型的继承关系：可以把ArrayList<Integer>向上转型为List<Integer>（T不能变！），
- * 但不能把ArrayList<Integer>向上转型为ArrayList<Number>（T不能变成）
+ * 泛型的继承关系：
+ * 可以把ArrayList<Integer>向上转型为List<Integer>（T不能变！），
+ * 不能把ArrayList<Integer>向上转型为ArrayList<Number>（T不能变）
  *
  * 2. 泛型接口
- * All elements in the array must implement the {@link Comparable} *      * interface
+ * jdk提供的排序方法: Arrays.sort(Object[] a)
+ * 要求:All elements in the array must implement the {@link Comparable} interface
  *
- * 2.5 自定义class, 并实现comparable<T>
+ * 2.5 如何实现泛型接口?
+ *  自定义class, 并实现comparable<T>, 重写compareTo方法即可.
  *
  *
  * @author welldo
@@ -43,7 +46,7 @@ public class What1 {
 }
 
 
-//2.5 排序规则
+//2.5 实现泛型接口
 class Person implements Comparable<Person> {
     String name;
     int score;
