@@ -18,9 +18,9 @@ package com.welldo.zero.collection10;
  * 2.
  * Java的java.util包主要提供了以下三种类型的集合：
  *   a.Collection
- *      |--- List：一种有序的,可以重复的元素的集合，
- *      |--- Set：一种无序的,没有重复元素的集合，
- *   b.Map：一种通过键值（key-value）查找的映射表集合，例如，根据Student的name查找对应Student的Map。
+ *      |--- List：一种有序的,可以重复的元素的集合;
+ *      |--- Set：一种无序的,没有重复元素的集合;
+ *   b.Map：一种通过键值（key-value）查找的映射表集合;
  *
  * 3.
  * 由于Java的集合设计非常久远，中间经历过大规模改进，我们要注意到有一小部分集合类是遗留类，不应该继续使用：
