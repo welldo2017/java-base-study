@@ -16,7 +16,7 @@ import com.welldo.zero.data_type_1.DataTypeChar;
  * 缺点: 各自为阵, 不统一, 强行统一使用的话,有冲突;
  *
  * 2.
- * 全球统一码联盟发布了 Unicode 编码，它把世界上主要语言都纳入同一个编码, Unicode编码需要两个
+ * 全球统一码联盟发布了 Unicode 编码，它把世界上主要语言都纳入同一个编码, Unicode编码需要两个字节(甚至更多)
  *          ┌────┐
  * ASCII:   │ 41 │
  *          └────┘
@@ -25,7 +25,7 @@ import com.welldo.zero.data_type_1.DataTypeChar;
  *          └────┴────┘
  *
  * Unicode 缺点
- * 用 Unicode 编码英文字符, 高字节总是00，包含大量英文的文本会浪费空间，
+ * 用 Unicode 编码英文字符,是简单地在ASCII前面添加一个00字节, 所以高字节总是00，包含大量英文的文本会浪费空间，
  *
  * 3. UTF-8
  * 所以，出现了UTF-8编码，它是一种变长编码，用来把固定长度的 Unicode 编码变成1～4字节的变长编码。
