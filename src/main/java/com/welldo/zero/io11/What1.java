@@ -45,10 +45,9 @@ import com.welldo.zero.oop_4.core_class.StrAndEncode2;
  *      二进制数据以byte为最小单位在InputStream/OutputStream中单向流动；
  *      字符数据以char为最小单位在Reader/Writer中单向流动。
  *
- * Java标准库的java.io包提供了同步IO功能：
+ * Java标准库的包java.io提供了同步IO，而java.nio则是异步IO。
  *      字节流接口：InputStream/OutputStream；
  *      字符流接口：Reader/Writer。
- *
  *
  * @author welldo
  * @date 2020/8/24
