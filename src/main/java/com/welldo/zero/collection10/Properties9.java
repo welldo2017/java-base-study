@@ -1,7 +1,8 @@
 package com.welldo.zero.collection10;
 
+import com.welldo.zero.io11.Classpath7;
+
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 /**
@@ -14,21 +15,21 @@ import java.util.Properties;
  * 由于历史遗留原因，Properties内部本质上是一个Hashtable，但我们只需要用到Properties自身关于读写配置的接口。
  *
  * 2.
- * Java默认配置文件以.properties为扩展名，每行以key=value表示，以#课开头的是注释。以下是一个典型的配置文件：
+ * Java默认配置文件以.properties为扩展名，每行以key=value表示，以#号开头的行,是注释。以下是一个典型的配置文件：
  * # setting.properties
  * last_open_file=/data/hello.txt
  * auto_save_interval=60
  *
  * 3.读取 * 一共有三步：
- * 创建Properties实例；
- * 调用load(InputStream)读取文件；(从)
+ * 创建Properties实例 prop；
+ * prop调用load(InputStream)读取文件；
  * 调用getProperty()获取配置。如果key不存在，将返回null。我们还可以提供一个默认值，这样，当key不存在的时候，就返回默认值。
  *
  *
  * 4.
  * 如果有多个.properties文件，可以反复调用load()读取，后读取的key-value会覆盖已读取的key-value：
  * Properties props = new Properties();
- * props.load(getClass().getResourceAsStream("/common/setting.properties"));
+ * props.load(getClass().getResourceAsStream("/setting.properties"));
  * props.load(new FileInputStream("C:\\conf\\setting.properties"));
  *
  *
@@ -67,10 +68,13 @@ public class Properties9 {
         System.out.println(prop3.getProperty("auto_save_interval"));
 
 
-        //3.从classpath读取.properties文件 todo 没搞明白
-        // properties.load(Properties9.class.getResourceAsStream("com/welldo/zero/collection10/setting.properties"));
-        // System.out.println(properties.getProperty("last_open_file"));
-        // System.out.println(properties.getProperty("auto_save_interval"));
+        /**
+         * 31.从classpath读取.properties文件; 详情请参考 {@link Classpath7}
+         */
+        Properties prop31 = new Properties();
+        prop31.load(Properties9.class.getResourceAsStream("/setting.properties"));
+        System.out.println(prop31.getProperty("last_open_file"));
+        System.out.println(prop31.getProperty("auto_save_interval"));
 
 
         //4.

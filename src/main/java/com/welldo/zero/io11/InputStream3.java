@@ -1,10 +1,8 @@
 package com.welldo.zero.io11;
 
-import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 
 /**
  * InputStream 和 缓冲
