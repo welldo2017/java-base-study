@@ -1,4 +1,4 @@
-package com.welldo.zero.Annotation8;
+package com.welldo.zero.annotation8;
 
 import com.sun.istack.internal.NotNull;
 

@@ -37,7 +37,7 @@ import java.util.TimeZone;
  * 2.时间戳
  * Epoch Time又称为时间戳，在不同的编程语言中，会有几种存储方式：
  * 以秒为单位的整数,10位：1574208900，缺点是精度只能到秒；
- * 以毫秒为单位的整数,13位：1574208900123，最后3位表示毫秒数；(而在Java程序中，使用这种)
+ * 以毫秒为单位的整数,13位：1574208900123，最后3位表示毫秒数；(在Java程序中，使用这种)
  * 以秒为单位的浮点数：1574208900.123，小数点后面表示毫秒数。
  *
  *
@@ -78,10 +78,11 @@ public class DateAndCalendar2 {
          * 使用SimpleDateFormat对一个Date进行转换。它用预定义的字符串表示格式化：
          * yyyy：年         * MM：月         * dd: 日
          * HH: 小时         * mm: 分钟         * ss: 秒
+         * SSS:毫秒
          */
         System.out.println("-----3-----");
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
         System.out.println(sdf.format(date));
 
 
@@ -119,6 +120,7 @@ public class DateAndCalendar2 {
          */
         System.out.println("-----42-----");
         c.clear();// 清除所有(并不清除时区信息, 所以还是 Asia/Shanghai)
+        System.out.println(c.getTimeZone().getDisplayName() );
         c.set(Calendar.YEAR, 2020);
         c.set(Calendar.MONTH, 1);// 设置2月:index从0开始
         c.set(Calendar.DATE, 22);
@@ -126,7 +128,8 @@ public class DateAndCalendar2 {
         c.set(Calendar.HOUR_OF_DAY, 22);
         c.set(Calendar.MINUTE, 22);
         c.set(Calendar.SECOND, 22);
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(c.getTime()));
+        c.set(Calendar.MILLISECOND, 001);
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS").format(c.getTime()));
 
 
         /*

@@ -1,10 +1,7 @@
-package com.welldo.zero.Annotation8;
-
-import com.sun.istack.internal.NotNull;
+package com.welldo.zero.annotation8;
 
 import java.lang.annotation.*;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 /**
  * 处理注解
