@@ -26,6 +26,8 @@ package com.welldo.zero.date_time_12;
  * 3.时区
  * 表示方式1:
  *      以GMT或者UTC加时区偏移表示，例如：GMT+08:00或者UTC+08:00表示东八区。(两者基本等价, 程序开发中可以忽略差别)
+ *      GMT 是 Greenwich Mean Time 的缩写，译为中文为“格林尼治标准时间”
+ *      UTC 是 Coordinated Universal Time 的缩写，译为中文为“世界标准时间”
  *
  * 表示方式2:
  *      缩写，例如，CST表示China Standard Time，也就是中国标准时间
