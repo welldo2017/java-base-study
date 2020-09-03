@@ -32,6 +32,8 @@ package com.welldo.zero.thread14;
  *                          ┌─────────────┐
  *                          │ Terminated  │终止
  *                          └─────────────┘
+ * https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/Thread.State.html
+ *
  * 2.
  * 当线程启动后，它可以在Runnable、Blocked、Waiting和Timed Waiting这几个状态之间切换，直到最后变成Terminated状态，线程终止。
  * 线程终止的原因有：

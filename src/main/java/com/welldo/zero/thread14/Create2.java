@@ -90,8 +90,11 @@ public class Create2 {
 
         //让main线程睡一下， 就可以看到两个线程执行的先后顺序
         try {
-            Thread.sleep(10);
-        } catch (InterruptedException e) {        }
+            Thread.sleep(10);//todo 睡眠的是哪个线程?
+        } catch (InterruptedException e) {
+
+        }
+
         System.out.println("main end...");
     }
 }
@@ -109,6 +112,5 @@ class myRunnable1 implements Runnable{
     @Override
     public void run() {
         System.out.println("12. myRunnable1");
-
     }
 }
