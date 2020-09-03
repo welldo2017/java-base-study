@@ -15,7 +15,7 @@
 
         <commonslog.version>1.2</commonslog.version>
         <!--github 提示, 需要改到2.13.2-->
-        <log4j.version>2.11.2</log4j.version>
+        <log4j.version>2.13.3</log4j.version>
         <junit.version>4.12</junit.version>
         <bouncycastle.version>1.56</bouncycastle.version>
     </properties>
