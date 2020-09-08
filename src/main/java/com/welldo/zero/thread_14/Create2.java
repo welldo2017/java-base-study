@@ -1,4 +1,4 @@
-package com.welldo.zero.thread14;
+package com.welldo.zero.thread_14;
 
 import com.welldo.zero.oop_4.base.Lambda15;
 

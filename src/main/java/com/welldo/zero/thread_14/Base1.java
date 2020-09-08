@@ -1,4 +1,4 @@
-package com.welldo.zero.thread14;
+package com.welldo.zero.thread_14;
 
 /**
  * 多线程基础
