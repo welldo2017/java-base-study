@@ -71,7 +71,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
-            <!--<scope>test</scope>-->
+            <scope>test</scope>
         </dependency>
 
         <!-- org.bouncycastle/bcprov-jdk15on 加密算法 -->
