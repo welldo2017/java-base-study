@@ -34,6 +34,7 @@ public class Condition_2 {
 
 }
 
+/** {@link Concurrent_5} */
 class TaskQueue2 {
     private final Lock lock = new ReentrantLock();
     private final Condition condition = lock.newCondition();

@@ -8,11 +8,11 @@ import java.util.concurrent.locks.ReentrantLock;
  * 使用ReentrantLock
  *
  * 1.
- * 从Java 5开始，引入了一个高级的处理并发的java.util.concurrent包，它提供了大量更高级的并发功能，能大大简化多线程程序的编写。
+ * 从Java 5开始，引入了一个高级的处理并发的java.util.concurrent包，它提供了更高级的并发功能，能大大简化多线程程序的编写。
  * 我们知道Java语言直接提供了synchronized关键字用于加锁，但这种锁一是很重，二是获取时必须一直等待，没有额外的尝试机制。
  * java.util.concurrent.locks包提供的 ReentrantLock 用于替代 synchronized 加锁
  *
- * 2. 传统的synchronized 与 ReentrantLock对比
+ * 2. 传统的synchronized 与 ReentrantLock对比, 看代码
  *
  * 3.和synchronized不同的是，ReentrantLock可以尝试获取锁：
  *
