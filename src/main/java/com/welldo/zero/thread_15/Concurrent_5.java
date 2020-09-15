@@ -33,7 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * 3. java.util.Collections工具类还提供了一个旧的线程安全集合转换器
  * 它实际上是用一个包装类包装了非线程安全的Map，然后对所有读写方法都用synchronized加锁，
- * 这样获得的线程安全集合的性能比java.util.concurrent集合要低很多，所以不推荐使用。
+ * !!! 这样获得的线程安全集合的性能比java.util.concurrent集合要低很多，所以不推荐使用。
  *
  * @author welldo
  * @date 2020/9/9
