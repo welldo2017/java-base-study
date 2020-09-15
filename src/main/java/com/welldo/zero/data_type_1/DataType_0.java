@@ -47,6 +47,6 @@ package com.welldo.zero.data_type_1;
  * @author welldo
  * @date 2020/8/6
  */
-public class DataType {
+public class DataType_0 {
 
 }

@@ -13,7 +13,7 @@ import com.welldo.zero.oop_4.core_class.StrAndEncode2;
  * @author welldo
  * @date 2020/8/6
  */
-public class DataTypeChar {
+public class DataTypeChar_4 {
     public static void main(String[] args) {
         char a = 'A';
         char zh = '中';

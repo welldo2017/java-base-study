@@ -14,7 +14,7 @@ package com.welldo.zero.data_type_1;
  * @author welldo
  * @date 2020/8/6
  */
-public class DataTypeFianl {
+public class DataTypeFinal_5 {
     public static void main(String[] args) {
 
         final double PI = 3.14; // PI是一个常量

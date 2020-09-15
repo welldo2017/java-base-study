@@ -26,6 +26,8 @@ package com.welldo.zero.maven_16;
  *
  * 3. 如果标准插件无法满足需求，可以使用自定义插件。使用自定义插件的时候，需要声明。
  * 例如，使用maven-shade-plugin可以创建一个可执行的jar， 要使用这个插件，需要在pom.xml中声明它：
+ *
+ * 注意:经过测试, 这个插件并不给力...请勿使用
  *  <build>
  * 		<plugins>
  * 			<plugin>

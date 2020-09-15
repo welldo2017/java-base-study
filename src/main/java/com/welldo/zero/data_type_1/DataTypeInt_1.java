@@ -12,7 +12,7 @@ package com.welldo.zero.data_type_1;
  * @author welldo
  * @date 2020/8/6
  */
-public class DataTypeInt {
+public class DataTypeInt_1 {
     public static void main(String[] args) {
 
         //int最大值

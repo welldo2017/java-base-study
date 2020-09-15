@@ -1,7 +1,7 @@
 package com.welldo.zero.data_type_1;
 
 /**
- * 浮点型 * flout double
+ * 浮点型 * float double
  *
  * 浮点类型的数就是小数，因为小数用科学计数法表示的时候，小数点是可以“浮动”的，
  * 如1234.5可以表示成1234.5x10^0, 也可以12.345x10^2，也可以1.2345x10^3，所以称为浮点数。
@@ -18,7 +18,7 @@ package com.welldo.zero.data_type_1;
  * @author welldo
  * @date 2020/8/6
  */
-public class DataTypeFlout {
+public class DataTypeFloat_2 {
     public static void main(String[] args) {
 
         float f1 = 3.14F;

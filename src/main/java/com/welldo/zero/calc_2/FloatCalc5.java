@@ -32,7 +32,7 @@ import com.welldo.zero.oop_4.core_class.BigDecimal8;
  * @author welldo
  * @date 2020/8/6
  */
-public class FloutCalc5 {
+public class FloatCalc5 {
     public static void main(String[] args) {
         System.out.println("!!!! 无法精确表示!!!");
         System.out.println(1 - 0.9);//0.1 无法精确表示

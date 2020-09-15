@@ -1,6 +1,6 @@
 package com.welldo.zero.oop_4.core_class;
 
-import com.welldo.zero.data_type_1.DataTypeChar;
+import com.welldo.zero.data_type_1.DataTypeChar_4;
 
 /**
  * 字符串和编码
@@ -44,7 +44,7 @@ import com.welldo.zero.data_type_1.DataTypeChar;
  * ============================
  *
  *
- * 4. 在Java中，char类型,一个字符占用两个字节, 并且用Unicode编码  {@link DataTypeChar}
+ * 4. 在Java中，char类型,一个字符占用两个字节, 并且用Unicode编码  {@link DataTypeChar_4}
  * !!!! 始终牢记：Java的String和char在内存中总是以Unicode编码表示。
  *
  *
