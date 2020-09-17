@@ -2,6 +2,7 @@ package com.welldo.zero.security_13;
 
 /**
  * 口令加密算法
+ * todo
  *
  * 
  * @author welldo
