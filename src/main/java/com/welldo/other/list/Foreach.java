@@ -1,4 +1,4 @@
-package com.welldo.base.list;
+package com.welldo.other.list;
 
 import java.util.ArrayList;
 import java.util.List;

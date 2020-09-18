@@ -1,7 +1,5 @@
 package com.welldo.zero.functional_20;
 
-import com.welldo.zero.oop_4.base.Lambda15;
-
 /**
  * 0. 什么是函数。
  * 函数是一种最基本的任务，一个大型程序就是一个顶层函数调用若干底层函数，这些被调用的函数又可以调用其他函数，即大任务被一层层拆解并执行。
