@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "name": "Java核心技术",
+  "author": {
+    "firstName": "wag",
+    "lastName": "welldo"
+  },
+  "isbn": "1234567",
+  "tags": ["Java", "bigdata"]
+}

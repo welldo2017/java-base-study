@@ -18,6 +18,7 @@
         <log4j.version>2.11.2</log4j.version>
         <junit.version>4.12</junit.version>
         <bouncycastle.version>1.56</bouncycastle.version>
+        <jackson.version>2.10.0</jackson.version>
     </properties>
 
     <dependencies>
@@ -80,7 +81,17 @@
             <version>${bouncycastle.version}</version>
         </dependency>
 
-
+        <!-- jackson 解析json -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
 
 
     </dependencies>
