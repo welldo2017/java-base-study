@@ -22,13 +22,11 @@ import java.util.concurrent.*;
  *      FixedThreadPool：线程数固定的线程池；
  *      CachedThreadPool：线程数根据任务动态调整的线程池；
  *      SingleThreadExecutor：仅单线程执行的线程池。
- *
- * 创建这些线程池的方法都被封装到Executors这个类中 * 看代码
+ * 看代码
  *
  * 3.CachedThreadPool
  *
- * 4.如果我们想把线程池的大小限制在4～10个之间动态调整怎么办?
- *
+ * 4.如果我们想把线程池的大小限制在4～10个之间动态调整怎么办?（推荐这种方式）
  *
  * 5.ScheduledThreadPool
  * 还有一种任务，需要定期反复执行，例如，每秒刷新证券价格。
@@ -91,8 +89,10 @@ public class ThreadPool_7 {
     }
 
     /**
-     * 4.如果我们想把线程池的大小限制在4～10个之间动态调整怎么办
-     * 我们查看Executors.newCachedThreadPool()方法的源码
+     * 4.如果我们想把线程池的大小限制在4～10个之间动态调整怎么办？
+     *
+     * ！！！《阿里巴巴Java开发手册》推荐这种方式
+     * 查看Executors.newCachedThreadPool()方法的源码，其实也调用了ThreadPoolExecutor构造器。
      */
     static void test4() {
         int min = 4;
@@ -132,6 +132,14 @@ public class ThreadPool_7 {
      * 使用shutdown()方法关闭线程池的时候，它会等待正在执行的任务先完成，然后再关闭。
      * shutdownNow()会立刻停止正在执行的任务，
      * awaitTermination(long timeout, TimeUnit unit)则会等待指定的时间让线程池关闭。
+     *
+     * ！！！《阿里巴巴Java开发手册》规定
+     * 线程池不允许使用 Executors 去创建，而是通过 ThreadPoolExecutor 的方式，这样让你更加明确线程池的运行规则，规避资源耗尽的风险。
+     * 说明：Executors 返回的线程池对象的弊端如下：
+     * 1） FixedThreadPool 和 SingleThreadPool：
+     *     允许的请求队列长度为 Integer.MAX_VALUE，可能会堆积大量的请求，从而导致 OOM。
+     * 2） CachedThreadPool：
+     *     允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM。
      */
     static void test2() {
         ExecutorService es = Executors.newFixedThreadPool(4); // 创建一个固定大小的线程池:

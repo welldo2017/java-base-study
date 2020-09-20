@@ -71,7 +71,7 @@ import java.time.LocalDate;
  * @author welldo
  * @date 2020/9/18
  */
-public class What {
+public class WhatIsJson {
 
     public static void main(String[] args) {
         // test1();
@@ -115,7 +115,7 @@ public class What {
     static void test1() {
         Book book = null;
         String json = "";
-        try (InputStream input = What.class.getResourceAsStream("/book.json")) {
+        try (InputStream input = WhatIsJson.class.getResourceAsStream("/book.json")) {
 
             ObjectMapper mapper = new ObjectMapper();
 

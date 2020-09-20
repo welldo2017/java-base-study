@@ -1,8 +1,8 @@
 package com.welldo.zero.io11;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import com.welldo.zero.json_18.WhatIsJson;
+
+import java.io.*;
 import java.util.Arrays;
 
 /**
@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 反序列化时，由JVM直接从 byte[]数组 创建构造出Java对象，不调用构造方法. 也就是说构造方法内部的代码(比如校验代码)，在反序列化时根本不可能执行。
  * 因此，它存在一定的安全隐患。一个精心构造的byte[]数组被反序列化后可以执行特定的Java代码，从而导致严重的安全漏洞。
  * 兼容性问题。
- * Java的序列化机制仅适用于Java，如果需要与其它语言交换数据，必须使用通用的序列化方法，例如JSON。
+ * Java的序列化机制仅适用于Java，如果需要与其它语言交换数据，必须使用通用的序列化方法，例如JSON。{@link WhatIsJson}
  *
  *
  * 其他.
@@ -39,7 +39,7 @@ import java.util.Arrays;
 public class Serializable8 {
     public static void main(String[] args) throws IOException {
 
-        //2.
+        //2.把一个Java对象变为byte[]数组，需要使用ObjectOutputStream。它负责把一个Java对象写入一个字节流
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         try (ObjectOutputStream output = new ObjectOutputStream(buffer)) {
             // 写入int:
