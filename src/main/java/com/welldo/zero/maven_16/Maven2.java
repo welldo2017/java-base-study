@@ -9,8 +9,11 @@ package com.welldo.zero.maven_16;
  *
  * Maven有三套相互独立的生命周期(Lifecycle )： 参考 https://www.cnblogs.com/zhaiqianfeng/p/4620138.html
  *      Clean ：做一些清理工作；
+ *          包含phase: pre-clean, clean, post-clean
  *      Default ：构建的核心部分、编译、测试、打包、部署等；
+ *          包含phase: 见1.1
  *      Site ：生成项目报告、站点、发布站点；
+ *          包含phase: pre-site, site, post-site, site-deploy
  *
  * 1.1 以内置的生命周期default为例，它包含以下phase：
  *      validate
@@ -33,7 +36,7 @@ package com.welldo.zero.maven_16;
  *      pre-integration-test
  *      integration-test
  *      post-integration-test
- *      verify
+ *      verify(只需创建包并将其安装到本地存储库中以供其他项目重用，就可以使用这个)
  *      install
  *      deploy
  *

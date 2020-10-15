@@ -1,4 +1,4 @@
-package com.welldo;
+package com.welldo.just_for_fun;
 
 
 /**

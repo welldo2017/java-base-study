@@ -1,6 +1,7 @@
 package com.welldo.zero.data_type_1;
 
 /**
+ *
  * 基本数据类型是CPU可以直接进行运算的类型。Java定义了以下8种基本数据类型：
  * 整数类型：byte，short，int，long
  * 浮点数类型：float，double
@@ -19,7 +20,11 @@ package com.welldo.zero.data_type_1;
  *
  *
  *******************************************************
- * 一个字节是1byte，1024字节是1K，1024K是1M，1024M是1G，1024G是1T
+ * 最小单元1byte (字节)
+ * 1k = 1024 byte，
+ * 1M = 1024k，
+ * 1G = 1024M
+ * 1T = 1024G
  * 不同的数据类型占用的字节数不一样。我们看一下Java基本数据类型占用的字节数：
  *        ┌───┐
  *   byte │   │

@@ -53,8 +53,5 @@ public class Classpath7 {
                 System.out.println("no");
             }
         }
-
-
-
     }
 }

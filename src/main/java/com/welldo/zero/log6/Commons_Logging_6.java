@@ -37,8 +37,11 @@ public class Commons_Logging_6 {
     static final Log log_static = LogFactory.getLog(Commons_Logging_6.class);
 
     public static void main(String[] args) {
-        log_static.info("start...");
-        log_static.warn("end.");
+        log_static.error("error");
+        log_static.warn("warn");
+        log_static.info("info");
+        log_static.debug("debug");//默认级别以下的，不会被打印
+        log_static.trace("trace");//默认级别以下的，不会被打印
 
         try {
             int y = 5/0;
