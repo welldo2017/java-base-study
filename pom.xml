@@ -10,20 +10,28 @@
 
 
     <properties>
-        <!--基础配置-->
+        <!--基础配置1-->
+        <!--编译代码的时候，涉及到资源文件的拷贝，拷贝涉及到文件的编码，这里设置文件的编码为UTF-8-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!--基础配置2-->
+        <!--指定源代码版本,指定生成的class文件将保证和哪个版本的虚拟机进行兼容，默认是1.5-->
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <java.version>8</java.version>
+
+
+        <!--基础配置3-->
+        <!--跳过测试-->
+        <!--<maven.test.skip>true</maven.test.skip>-->
 
         <slf4j.version>1.7.12</slf4j.version>
         <logback.version>1.2.3</logback.version>
 
         <commonslog.version>1.2</commonslog.version>
-        <!--github 提示, 需要改到2.13.2-->
-        <log4j.version>2.11.2</log4j.version>
-        <junit.version>4.12</junit.version>
+        <log4j.version>2.13.3</log4j.version>
+        <junit.version>4.13.1</junit.version>
         <bouncycastle.version>1.56</bouncycastle.version>
         <jackson.version>2.10.0</jackson.version>
     </properties>
@@ -129,6 +137,7 @@
 
             <!-- 设置主类 -->
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <descriptorRefs>
@@ -150,6 +159,40 @@
                     </execution>
                 </executions>
             </plugin>
+
+
+            <!-- maven练习，skip test -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+
+            <!-- maven练习 -->
+            <!--自定义了一个绑定，在clean周期的pre-clean阶段绑定了插件maven-surefire-plugin的两个目标test和help，
+            execution元素没有指定id，所以默认id是default。-->
+            <!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test</goal>
+                            <goal>help</goal>
+                        </goals>
+                        <phase>pre-clean</phase>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            -->
+
 
         </plugins>
     </build>

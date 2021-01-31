@@ -1,7 +1,8 @@
 package com.welldo.zero.maven_16;
 
 /**
- * 使用插件
+ * 使用插件 可以作废
+ * http://www.itsoku.com/article/240
  *
  * 0.前面介绍了: 使用Maven构建项目就是执行lifecycle，执行到指定的phase为止。每个phase会执行自己默认的一个或多个goal。
  *

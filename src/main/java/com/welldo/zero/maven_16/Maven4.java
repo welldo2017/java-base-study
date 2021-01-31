@@ -2,6 +2,7 @@ package com.welldo.zero.maven_16;
 
 /**
  *
+ * pom中的一些基础配置
  *
  * <properties>
  * 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
