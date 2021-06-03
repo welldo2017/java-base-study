@@ -5,7 +5,7 @@ package com.welldo.design_pattern.create;
  * 创建型模式包括：
  *      工厂方法：Factory Method
  *      抽象工厂：Abstract Factory
- *      建造者：Builder
+ *      建造者：GenericBuilder
  *      原型：Prototype
  *      单例：Singleton
  *
