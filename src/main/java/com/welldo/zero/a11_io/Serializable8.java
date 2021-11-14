@@ -1,6 +1,6 @@
 package com.welldo.zero.a11_io;
 
-import com.welldo.zero.json_18.WhatIsJson;
+import com.welldo.zero.a18_json.WhatIsJson;
 
 import java.io.*;
 import java.util.Arrays;

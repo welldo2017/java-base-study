@@ -1,6 +1,6 @@
 package com.welldo.zero.a4_oop.base;
 
-import com.welldo.zero.maven_16.Maven1;
+import com.welldo.zero.a16_maven.Maven1;
 
 /**
  * 0.
