@@ -11,8 +11,8 @@ import java.util.logging.Logger;
  * 因为Java标准库内置了日志包java.util.logging，我们可以直接用。
  *
  * 2.JDK的Logging定义了7个日志级别，从严重到普通：
- * 默认级别是INFO，默认级别以下的日志，不会被打印出来
  * SEVERE * WARNING * INFO(默认级别) * CONFIG * FINE * FINER * FINEST
+ * 默认级别是INFO，默认级别以下的日志，不会被打印出来
  *
  * 3. 缺点
  * Logging系统在JVM启动时, 读取配置文件并完成初始化，一旦开始运行main()方法，就无法修改配置；

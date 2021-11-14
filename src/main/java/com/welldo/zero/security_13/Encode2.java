@@ -1,6 +1,6 @@
 package com.welldo.zero.security_13;
 
-import com.welldo.zero.oop_4.core_class.StrAndEncode2;
+import com.welldo.zero.a4_oop.core_class.StrAndEncode2;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;

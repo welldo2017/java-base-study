@@ -8,6 +8,7 @@ import java.util.Properties;
 
 /**
  * 读取classpath资源
+ * classpath是JVM用到的一个环境变量，它用来指示JVM如何搜索class文件,所以叫class path。
  *
  * 1. {@link Properties9}
  * 很多Java程序启动的时候，都需要读取配置文件。例如，从一个.properties文件中读取配置：

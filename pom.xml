@@ -145,7 +145,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.welldo.zero.oop_4.base.Classpath14</mainClass>
+                            <mainClass>com.welldo.zero.a4_oop.base.Classpath14</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -42,10 +42,10 @@ import java.time.LocalDateTime;
 public class Daemon6 {
     public static void main(String[] args) {
         Timer timer = new Timer();
-        //如果不加这句, 5s后, main线程结束, timer线程仍然打印时间.
-        // timer.setDaemon(true);
-        timer.start();
 
+        // timer.setDaemon(true);//如果不加这句, 5s后, main线程结束, timer线程仍然打印时间.
+
+        timer.start();
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {

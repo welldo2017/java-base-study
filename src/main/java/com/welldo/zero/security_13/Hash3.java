@@ -2,7 +2,7 @@ package com.welldo.zero.security_13;
 
 import com.welldo.zero.collection10.EqualsAndHashCode6;
 
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -65,7 +65,7 @@ import java.security.NoSuchAlgorithmException;
  * @date 2020/9/1
  */
 public class Hash3 {
-    public static void main(String[] args) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public static void main(String[] args) throws NoSuchAlgorithmException, IOException {
 
         /*
          * 2. 两者hashcode 都是0x7460e8c0或者1952508096
@@ -74,10 +74,13 @@ public class Hash3 {
         System.out.println("AaAaAa".hashCode());
         System.out.println("BBAaBB".hashCode());
 
+        getsha1FromFile();
 
-        /*
-         * 3.Java标准库提供了常用的哈希算法，并且有一套统一的接口
-         */
+    }
+
+     //3.Java标准库提供了常用的哈希算法，并且有一套统一的接口
+    static void getMd5FromString() throws NoSuchAlgorithmException, UnsupportedEncodingException {
+
         System.out.println("-----3-----");
         // 创建一个MessageDigest实例:
         MessageDigest md = MessageDigest.getInstance("MD5");
@@ -90,17 +93,42 @@ public class Hash3 {
         byte[] result = md.digest();
         //最后，把它转换为十六进制的字符串。
         System.out.println(new BigInteger(1, result).toString(16)); // 16 bytes: 68e109f0f40ca72a15e05cc22786f8e6
+    }
 
-        /*
-         * 5.SHA-1
-         */
+    //获取文件的sha-1
+    static void getsha1FromFile() throws NoSuchAlgorithmException, IOException {
+
+        System.out.println("-----5 get sha1 From File-----");
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+
+
+        try (InputStream input = new FileInputStream("D:\\6.softWare\\chrome\\70.0.3538.110_chrome_installer.exe")) {//此文件有930个字节
+            // 定义1024个字节大小的缓冲区:
+            byte[] buffer = new byte[1024*1024];
+            int n;
+            while ((n = input.read(buffer)) != -1) { // 读取到缓冲区
+                System.out.println("read " + n + " bytes.");
+
+                // 反复调用update输入数据:
+                md.update(buffer);
+            }
+        }
+
+        byte[] result = md.digest();
+        System.out.println(new BigInteger(1, result).toString(16));
+    }
+
+    //5. sha-1
+    static void sha1() throws NoSuchAlgorithmException, UnsupportedEncodingException {
         System.out.println("-----5-----");
         MessageDigest example5 = MessageDigest.getInstance("SHA-1");
 
+        // 反复调用update输入数据:
         example5.update("Hello".getBytes("UTF-8"));
         example5.update("World".getBytes("UTF-8"));
 
         byte[] result5 = example5.digest();
         System.out.println(new BigInteger(1, result5).toString(16)); // 20 bytes: db8ac1c259eb89d4a131b253bacfca5f319d54f2
     }
+
 }

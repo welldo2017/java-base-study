@@ -1,6 +1,6 @@
 package com.welldo.zero.reflection7;
 
-import com.welldo.zero.oop_4.base.Plymorphic5;
+import com.welldo.zero.a4_oop.base.Plymorphic5;
 import java.lang.reflect.Method;
 
 /**

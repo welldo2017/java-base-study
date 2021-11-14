@@ -1,6 +1,6 @@
 package com.welldo.zero.thread_15;
 
-import com.welldo.zero.oop_4.core_class.SomeUtil9;
+import com.welldo.zero.a4_oop.core_class.SomeUtil9;
 
 import java.util.Random;
 import java.util.concurrent.ForkJoinPool;

@@ -11,6 +11,10 @@ package com.welldo.zero.maven_16;
  *
  * 这些都是开源的私服软件，都可以自由使用。用的最多的是第三种Nexus，
  *
+ * 1.5 nexus下载地址
+ * https://help.sonatype.com/repomanager3/download
+ *
+ *
  *
  * 2.windows中安装nexus私服
  * 3.linux中安装nexus私服

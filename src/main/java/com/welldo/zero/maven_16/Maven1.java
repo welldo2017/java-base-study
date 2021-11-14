@@ -67,6 +67,8 @@ package com.welldo.zero.maven_16;
  *             <artifactId></artifactId>
  *             <version></version>
  *
+ *             <packaging></packaging>
+ *
  *             <type></type>
  *             <scope></scope>
  *             <optional>true</optional>

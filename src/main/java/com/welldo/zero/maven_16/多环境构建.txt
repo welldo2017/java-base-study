@@ -1,0 +1,58 @@
+<properties>
+        <!-- 指定资源文件复制过程中采用的编码方式 -->
+        <encoding>UTF-8</encoding>
+
+        <!-- maven中不需要自定义的5类属性。可以直接拿来使用的。
+         1.内置属性 ${basedir}：${version}
+         2.POM属性
+         3.Settings属性, 这种属性以settings.开头来引用~/.m2/settings.xml中的内容
+         4.java系统属性
+         5.环境变量属性,所有的环境变量都可以使用env.开头的方式来进行引用，如：${env.JAVA_HOME}
+
+         输入命令 mvn help:effective-pom -pl com.welldo:maven-test > 1.xml
+         将会输出下列所有属性的值.
+         -->
+
+        <!-- 1.内置属性 ${basedir}：${version} -->
+        <!-- 表示项目根目录，即包含pom.xml文件的目录 -->
+        <inside1>${basedir}</inside1>
+        <!-- 表示项目的版本号,与${project.version} 等价 -->
+        <inside2>${version}</inside2>
+
+
+        <!-- 2.pom属性 -->
+        <!-- 项目的主源码目录，默认为 全路径的 src/main/java/ -->
+        <a>${pom.build.sourceDirectory}</a>
+        <!-- 项目的测试源码目录，默认为 全路径的 src/test/java/ -->
+        <b>${project.build.testSourceDirectory}</b>
+        <!-- 项目构建输出目录，默认为 全路径的 target/ -->
+        <c>${project.build.directory}</c>
+        <!-- 项目主代码编译输出目录，默认为 全路径的 target/classes -->
+        <d>${project.build.outputDirectory}</d>
+        <!-- 项目测试代码编译输出目录，默认为 全路径的 target/test-classes -->
+        <e>${project.build.testOutputDirectory}</e>
+
+        <!-- 项目的groupId -->
+        <f>${project.groupId}</f>
+        <!-- 项目的artifactId -->
+        <g>${project.artifactId}</g>
+        <!-- 项目的version，与${version}等价-->
+        <h>${project.version}</h>
+        <!-- 项目打包输出文件的名称，默认为${project.artifactId}-${project.version} -->
+        <i>${project.build.finalName}</i>
+
+
+        <!-- 3.setting属性 -->
+        <!-- 获取本地仓库地址, 无法获取, 为什么-->
+        <a1>${settings.localRepository}</a1>
+
+
+        <!-- 4.系统属性 -->
+        <!-- 用户目录, c盘用户的家目录 -->
+        <a2>${user.home}</a2>
+
+
+        <!-- 5.环境变量属性，获取环境变量JAVA_HOME的值 -->
+        <a3>${env.JAVA_HOME}</a3>
+
+</properties>

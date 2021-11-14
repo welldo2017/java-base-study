@@ -74,8 +74,8 @@ import java.time.LocalDate;
 public class WhatIsJson {
 
     public static void main(String[] args) {
-        // test1();
-        test6();
+        test1();
+        // test6();
     }
 
 

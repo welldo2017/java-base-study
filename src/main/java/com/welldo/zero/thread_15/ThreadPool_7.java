@@ -19,9 +19,9 @@ import java.util.concurrent.*;
  * 2.
  * Java标准库提供了ExecutorService接口表示线程池，
  * ExecutorService只是接口，Java标准库提供的几个常用实现类有：
- *      FixedThreadPool：线程数固定的线程池；
- *      CachedThreadPool：线程数根据任务动态调整的线程池；
- *      SingleThreadExecutor：仅单线程执行的线程池。
+ *      Executors.FixedThreadPool：线程数固定的线程池；
+ *      Executors.CachedThreadPool：线程数根据任务动态调整的线程池；
+ *      Executors.SingleThreadExecutor：仅单线程执行的线程池。
  * 看代码
  *
  * 3.CachedThreadPool
@@ -93,6 +93,8 @@ public class ThreadPool_7 {
      *
      * ！！！《阿里巴巴Java开发手册》推荐这种方式
      * 查看Executors.newCachedThreadPool()方法的源码，其实也调用了ThreadPoolExecutor构造器。
+     *
+     * keepAliveTime: 当线程数大于核心时，这是多余空闲线程在终止前等待新任务的最长时间。
      */
     static void test4() {
         int min = 4;
@@ -118,7 +120,7 @@ public class ThreadPool_7 {
 
 
         // 2秒后开始执行定时任务，每3秒执行:
-        es.scheduleAtFixedRate(new Task72("fixed-rate"), 2, 3, TimeUnit.SECONDS);
+        // es.scheduleAtFixedRate(new Task72("fixed-rate"), 2, 3, TimeUnit.SECONDS);
 
         //如果任务以固定的3秒为间隔执行，我们可以这样写：
         //2秒后开始执行定时任务，以3秒为间隔执行:

@@ -1,6 +1,6 @@
 package com.welldo.zero.io11;
 
-import com.welldo.zero.oop_4.core_class.StrAndEncode2;
+import com.welldo.zero.a4_oop.core_class.StrAndEncode2;
 
 /**
  * IO是指Input/Output，即输入和输出。
@@ -26,7 +26,7 @@ import com.welldo.zero.oop_4.core_class.StrAndEncode2;
  * 如果我们需要读写的是字符，并且字符不全是单字节表示的ASCII字符，那么，按照char来读写显然更方便，这种流称为字符流。
  * Java提供了Reader和Writer表示字符流，字符流传输的最小数据单位是char。
  *
- * 例如，我们把char[]数组  这4个字符用Writer字符流写入文件，并且使用UTF-8编码，
+ * 例如，我们把 "Hi你好"  这4个字符用Writer字符流写入文件，并且使用UTF-8编码，
  * 得到的最终文件内容是8个字节，英文字符H和i各占一个字节，中文字符你好各占3个字节： *
  * 0x48 * 0x69 * 0xe4bda0 * 0xe5a5bd
  * 反过来，我们用Reader读取以UTF-8编码的这8个字节，会从Reader中得到 "Hi你好" 这4个字符。

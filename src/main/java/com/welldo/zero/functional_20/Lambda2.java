@@ -1,6 +1,6 @@
 package com.welldo.zero.functional_20;
 
-import com.welldo.zero.oop_4.base.Lambda15;
+import com.welldo.zero.a4_oop.base.Lambda15;
 
 import java.util.Arrays;
 import java.util.Comparator;
