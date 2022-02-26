@@ -39,15 +39,15 @@ public class AccessFields3 {
     public static void main(String[] args) throws Exception {
         //1.
         Class stdClass = Student.class;
-        System.out.println(stdClass.getField("score"));// 获取public字段"score":
-        System.out.println(stdClass.getField("name"));// 获取继承的public字段"name":
-        System.out.println(stdClass.getDeclaredField("grade"));// 获取private字段"grade":
+        System.out.println(stdClass.getField("score"));// 获取自有字段 "score":
+        System.out.println(stdClass.getField("name"));// 获取继承的字段 "name":
+        System.out.println(stdClass.getDeclaredField("grade"));// 获取自有字段 "grade":
 
         //2.
         System.out.println("---------");
-        Field f = String.class.getDeclaredField("value");
+        Field f = String.class.getDeclaredField("value");//string类的自有字段
         f.getName(); // "value"
-        f.getType();// class [c 表示char[]类型
+        f.getType();// class [c                 (表示char[]类型)
         int m = f.getModifiers();//这里m = 18
         Modifier.isFinal(m); // true
         Modifier.isPublic(m); // false
@@ -63,11 +63,11 @@ public class AccessFields3 {
 
         //调用Field.setAccessible(true)的意思是，别管这个字段是不是public，一律允许访问。
         nameField.setAccessible(true);
-        System.out.println(nameField.get(p));//获取名字
+        System.out.println("old name: "+nameField.get(p));//获取名字
 
         //设置字段的值
         nameField.set(p,"welldo");
-        System.out.println(p.getName());//获取名字
+        System.out.println("new name: "+p.getName());//获取名字
 
     }
 }

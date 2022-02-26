@@ -37,30 +37,31 @@ import org.apache.commons.logging.LogFactory;
  *
  *
  * 一个Class实例包含了该class的所有完整信息：
- * JVM为每个加载的class创建了对应的Class实例，并在实例中保存了该class的所有信息，包括类名、包名、父类、实现的接口、所有方法、字段等，
- * 因此，如果获取了某个Class实例，我们就可以通过这个Class实例获取到该实例对应的class的所有信息。
+ * JVM为每个加载的class创建了对应的Class实例，并在实例中保存了该class的所有信息，
+ * 因此，如果获取了某个Class实例，我们就可以通过这个Class实例,获取到该实例对应的class的所有信息。
  * ┌───────────────────────────┐
  * │      Class Instance       │──────> String
  * ├───────────────────────────┤
- * │name = "java.lang.String"  │
+ * │name = "java.lang.String"  │类名
  * ├───────────────────────────┤
- * │package = "java.lang"      │
+ * │package = "java.lang"      │包名
  * ├───────────────────────────┤
- * │super = "java.lang.Object" │
+ * │super = "java.lang.Object" │父类
  * ├───────────────────────────┤
- * │interface = CharSequence...│
+ * │interface = CharSequence...│实现的接口
  * ├───────────────────────────┤
- * │field = value[],hash,...   │
+ * │field = value[],hash,...   │字段
  * ├───────────────────────────┤
- * │method = indexOf()...      │
+ * │method = indexOf()...      │所有方法
  * └───────────────────────────┘
  *
  * !!!
  * 这种通过Class实例获取class信息的方法称为反射（Reflection）。
  *
  * 如何获取一个class的Class实例？有三个方法：
- * 1. 直接通过一个class的静态变量class获取：
+ * 1. 直接通过类的静态变量class获取(每个类都有)：
  *  Class cls = String.class;
+ *  Class cls2 = Person.class;
  *
  * 2.方法二：如果我们有一个实例变量，可以通过该实例变量提供的getClass()方法获取：
  * String s = "Hello";
@@ -69,7 +70,7 @@ import org.apache.commons.logging.LogFactory;
  * 3.方法三：如果知道一个class的完整类名，可以通过静态方法Class.forName()获取：
  * Class cls = Class.forName("java.lang.String");
  *
- * !!! 因为Class实例在JVM中是唯一的，所以，上述方法获取的Class实例是同一个实例。可以用==比较两个Class实例：
+ * !!! 因为Class实例在JVM中是唯一的，所以，上述方法2&3,获取的Class实例是同一个实例。可以用==比较两个Class实例：
  *
  * 5. !!!
  * 注意一下Class实例比较和instanceof的差别：
@@ -106,10 +107,10 @@ import org.apache.commons.logging.LogFactory;
  *       People pp = new People(name);
  *       ............
  *       ...........
- *       Person p = new Person(name);
+ *       Student p = new Student(name);
  * }
- * 执行到了第一行,jvm才会把People.class加载到内存, (并不会加载Person.class)
- * 执行到了第4行,JVM发现需要加载Person类时，才会首次加载Person.class
+ * 执行到了第1行,jvm才会把People.class加载到内存, (并不会加载Person.class)
+ * 执行到了第4行,JVM发现需要加载 Student 类时，才会首次加载 Student.class
  *
  * 这就是JVM 的非常重要的 '动态加载class特性', 才能在运行期根据条件加载不同的实现类
  * 例如，Commons Logging总是优先使用Log4j，只有当Log4j不存在时，才使用JDK的logging。

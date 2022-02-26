@@ -48,21 +48,22 @@ public class AccessMethod4 {
 
 
         //3.调用方法
+        System.out.println("3.-------------------");
         String s = "Hello world";
         String world = s.substring(6); // "world"
 
         // 获取String substring(int)方法，参数为int:
         Method m1 = String.class.getMethod("substring", int.class);
         m1.setAccessible(true);
-        // 在s对象上调用该方法并获取结果:
+        // 在s对象上,用该反射方法,获取结果:
         String r = (String) m1.invoke(s, 6);
-        System.out.println(r);
+        System.out.println("调用方法: "+r);
 
-        //调用重载方法
+        // 获取String substring(int)重载方法，参数为int,int
         Method m2 = String.class.getMethod("substring", int.class,int.class);
         m2.setAccessible(true);
         String r2 = (String) m2.invoke(s, 0, 5);
-        System.out.println(r2);
+        System.out.println("调用重载方法: "+r2);
 
         //4.调用静态方法
         // 如果获取到的Method表示一个静态方法，调用静态方法时，由于无需指定实例对象，
@@ -102,7 +103,6 @@ class Student4 extends Person4 {
     public void hello() {
         System.out.println("子类:hello");
     }
-
 }
 
 class Person4 {

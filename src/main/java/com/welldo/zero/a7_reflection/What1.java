@@ -1,12 +1,12 @@
 package com.welldo.zero.a7_reflection;
 
 /**
- * 什么是反射？
- * 反射就是 Reflection，Java的反射, 是指程序在运行期可以拿到一个对象的所有信息。
+ * 什么是反射(Reflection)？
+ * Java的反射, 是指程序在运行期可以拿到一个对象的所有信息。
  *
  * 1.
  * 正常情况下，如果我们要调用一个对象的方法，或者访问一个对象的字段，通常会传入对象实例：
- * import com.itranswarp.learnjava.Person;
+ * import com.xx.xxx.Person;
  * public class Main {
  *     String getFullName(Person p) {
  *         return p.getFirstName() + " " + p.getLastName();
